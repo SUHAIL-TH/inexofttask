@@ -9,7 +9,7 @@ const generateEmpCode = async () => {
   let existingUser;
   
   do {
-      empCode = "EMP" + Math.floor(100000 + Math.random() * 900000); // Generate a random 6-digit EMP code
+      empCode = "EMP" + Math.floor(100000 + Math.random() * 900000); 
       existingUser = await userSchema.findOne({ empCode });
   } while (existingUser); // Ensure empCode is unique
 
